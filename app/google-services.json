@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394554328243",
+    "project_id": "ecommercy-app",
+    "storage_bucket": "ecommercy-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394554328243:android:0b6bf5b74e7b5e1a165cc6",
+        "android_client_info": {
+          "package_name": "com.example.ecommercyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394554328243-ujebli83cmh1jtuds0fi2uvciiifvqaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmgCsvyGCYE3GavqCNRVqpe_eaH4NKCwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394554328243-ujebli83cmh1jtuds0fi2uvciiifvqaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
