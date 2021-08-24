@@ -14,7 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/aclonica"
         android:text="@string/signup"
-        android:textColor="@color/head"
+        android:textColor="@color/textHeading"
         android:textSize="90sp"
         android:textStyle="bold" />
     <ImageView

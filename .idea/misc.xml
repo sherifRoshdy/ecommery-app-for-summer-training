@@ -7,9 +7,15 @@
         <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/drawable/ic_baseline_account_circle.xml" value="0.2703125" />
         <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2703125" />
         <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.2703125" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_add_address.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_addresactivty.xml" value="0.13020833333333334" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_cart.xml" value="0.13020833333333334" />
         <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
-        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_registration.xml" value="0.264" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/activity_registration.xml" value="0.1" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/my_cart_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/layout/popular_items.xml" value="0.13020833333333334" />
+        <entry key="..\:/Android main Project/ecommery-app-for-summer-training/app/src/main/res/menu/main_menu.xml" value="0.13020833333333334" />
       </map>
     </option>
   </component>
