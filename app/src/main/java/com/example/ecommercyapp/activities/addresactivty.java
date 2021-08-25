@@ -1,4 +1,4 @@
-package com.example.ecommercyapp;
+package com.example.ecommercyapp.activities;
 
 import android.app.Activity;
 

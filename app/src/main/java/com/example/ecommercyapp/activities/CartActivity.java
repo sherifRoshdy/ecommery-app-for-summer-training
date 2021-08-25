@@ -1,8 +1,10 @@
-package com.example.ecommercyapp;
+package com.example.ecommercyapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.ecommercyapp.R;
 
 public class CartActivity extends AppCompatActivity {
 
