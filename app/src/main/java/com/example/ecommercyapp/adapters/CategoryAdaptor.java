@@ -1,6 +1,8 @@
 package com.example.ecommercyapp.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ecommercyapp.R;
+import com.example.ecommercyapp.activities.ShowAllActivity;
 import com.example.ecommercyapp.models.CategoryModel;
 
 import java.util.List;
@@ -32,7 +35,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryAdaptor.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryAdaptor.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.catImg);
         holder.catName.setText(list.get(position).getName());
@@ -40,8 +43,8 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context.ShowAllActivity.class);
-                intent.putExtra(name:"type",list.get(position).getType());
+                Intent intent = new Intent(context, ShowAllActivity.class);
+                intent.putExtra("type",list.get(position).getType());
                 context.startActivity(intent);
             }
         });

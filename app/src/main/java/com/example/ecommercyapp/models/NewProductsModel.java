@@ -1,5 +1,7 @@
 package com.example.ecommercyapp.models;
 
+import java.io.Serializable;
+
 public class NewProductsModel implements Serializable {
 
     String description;

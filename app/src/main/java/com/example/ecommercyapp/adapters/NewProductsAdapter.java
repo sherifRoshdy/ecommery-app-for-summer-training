@@ -1,6 +1,7 @@
 package com.example.ecommercyapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ecommercyapp.R;
+import com.example.ecommercyapp.activities.DetailedActivity;
 import com.example.ecommercyapp.models.NewProductsModel;
 
 import java.util.List;
@@ -33,7 +35,7 @@ public class NewProductsAdapter extends RecyclerView.Adapter<NewProductsAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull viewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull viewHolder holder,int position) {
 
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.newImg);
         holder.newName.setText(list.get(position).getName());
@@ -43,7 +45,7 @@ public class NewProductsAdapter extends RecyclerView.Adapter<NewProductsAdapter.
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (context, DetailedActivity.class);
-                intent.putExtra(name:"detailed",list.get(position));
+                intent.putExtra("detailed",list.get(position));
                 context.startActivity(intent);
             }
         });

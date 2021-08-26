@@ -1,6 +1,7 @@
 package com.example.ecommercyapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ecommercyapp.R;
+import com.example.ecommercyapp.activities.DetailedActivity;
 import com.example.ecommercyapp.models.PopularProductsModel;
 
 import java.util.List;
@@ -33,16 +35,16 @@ public class PopularProductsAdapter extends RecyclerView.Adapter<PopularProducts
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PopularProductsAdapter.ViewHolder holder, int position) {
-        Glide.with(context).load(list.get(position).getImg_url()).into(holder.imageView);
-        holder.name.setText(list.get(position).getName());
-        holder.price.setText(String.valueOf(list.get(position).getPrice()));
+    public void onBindViewHolder(@NonNull ViewHolder holder , int postion) {
+        Glide.with(context).load(list.get(postion).getImg_url()).into(holder.imageView);
+        holder.name.setText(list.get(postion).getName());
+        holder.price.setText(String.valueOf(list.get(postion).getPrice()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (context, DetailedActivity.class);
-                intent.putExtra(name:"detailed",popularProductsModelList.get(position));
+                intent.putExtra("detailed",list.get(postion));
                 context.startActivity(intent);
             }
         });

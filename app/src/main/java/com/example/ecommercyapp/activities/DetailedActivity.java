@@ -2,8 +2,16 @@ package com.example.ecommercyapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.ecommercyapp.R;
+import com.example.ecommercyapp.models.NewProductsModel;
+import com.example.ecommercyapp.models.PopularProductsModel;
+import com.example.ecommercyapp.models.ShowAllModel;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class DetailedActivity extends AppCompatActivity {
 
@@ -27,7 +35,7 @@ public class DetailedActivity extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
 
-        final Object obj = getIntent().getSerializableExtra(name:"detailed");
+        final Object obj = getIntent().getSerializableExtra("detailed");
 
         if(obj instanceof NewProductsModel){
             newProductsModel = (NewProductsModel)obj;
@@ -49,25 +57,25 @@ public class DetailedActivity extends AppCompatActivity {
         removeItems = findViewById(R.id.remove_item);
 
         if(newProductsModel != null){
-            Glide.with(getApplicationContext()).load(newProductsModel.getImg_url()).into(detailedImg)
-            name.setText(newProductsModel.grtName());
-            rating.setText(newProductsModel.grtRating());
-            description.setText(newProductsModel.grtDescription());
-            price.setText(String.valueOf(newProductsModel.grtPrice()));
+            Glide.with(getApplicationContext()).load(newProductsModel.getImg_url()).into(detailedImg);
+            name.setText(newProductsModel.getName());
+            rating.setText(newProductsModel.getRating());
+            description.setText(newProductsModel.getDescription());
+            price.setText(String.valueOf(newProductsModel.getPrice()));
         }
         if(popularProductsModel != null){
-            Glide.with(getApplicationContext()).load(popularProductsModel.getImg_url()).into(detailedImg)
-            name.setText(popularProductsModel.grtName());
-            rating.setText(popularProductsModel.grtRating());
-            description.setText(popularProductsModel.grtDescription());
-            price.setText(String.valueOf(popularProductsModel.grtPrice()));
+            Glide.with(getApplicationContext()).load(popularProductsModel.getImg_url()).into(detailedImg);
+            name.setText(popularProductsModel.getName());
+            rating.setText(popularProductsModel.getRating());
+            description.setText(popularProductsModel.getDescription());
+            price.setText(String.valueOf(popularProductsModel.getPrice()));
         }
         if(showAllModel != null){
-            Glide.with(getApplicationContext()).load(showAllModel.getImg_url()).into(detailedImg)
-            name.setText(showAllModel.grtName());
-            rating.setText(showAllModel.grtRating());
-            description.setText(showAllModel.grtDescription());
-            price.setText(String.valueOf(showAllModel.grtPrice()));
+            Glide.with(getApplicationContext()).load(showAllModel.getImag_url()).into(detailedImg);
+            name.setText(showAllModel.getName());
+            rating.setText(showAllModel.getRating());
+            description.setText(showAllModel.getDescription());
+            price.setText(String.valueOf(showAllModel.getPrice()));
         }
     }
 }

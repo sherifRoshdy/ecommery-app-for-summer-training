@@ -43,15 +43,16 @@
                     android:textColor="@color/black"
                     android:fontFamily="@font/amethysta"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4.0"
-                    android:layout_toStartOf="@+id/my_rating"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/amethysta"/>
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@+id/my_rating"
+            android:fontFamily="@font/amethysta"
+            android:text="4.0"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
                 <RatingBar
                     android:id="@+id/my_rating"
