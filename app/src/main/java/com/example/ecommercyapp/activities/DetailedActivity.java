@@ -54,21 +54,20 @@ public class DetailedActivity extends AppCompatActivity {
             rating.setText(newProductsModel.grtRating());
             description.setText(newProductsModel.grtDescription());
             price.setText(String.valueOf(newProductsModel.grtPrice()));
-
-            if(popularProductsModel != null){
-                Glide.with(getApplicationContext()).load(popularProductsModel.getImg_url()).into(detailedImg)
-                name.setText(popularProductsModel.grtName());
-                rating.setText(popularProductsModel.grtRating());
-                description.setText(popularProductsModel.grtDescription());
-                price.setText(String.valueOf(popularProductsModel.grtPrice()));
-            }
-            if(showAllModel != null){
-                Glide.with(getApplicationContext()).load(showAllModel.getImg_url()).into(detailedImg)
-                name.setText(showAllModel.grtName());
-                rating.setText(showAllModel.grtRating());
-                description.setText(showAllModel.grtDescription());
-                price.setText(String.valueOf(showAllModel.grtPrice()));
-            }
+        }
+        if(popularProductsModel != null){
+            Glide.with(getApplicationContext()).load(popularProductsModel.getImg_url()).into(detailedImg)
+            name.setText(popularProductsModel.grtName());
+            rating.setText(popularProductsModel.grtRating());
+            description.setText(popularProductsModel.grtDescription());
+            price.setText(String.valueOf(popularProductsModel.grtPrice()));
+        }
+        if(showAllModel != null){
+            Glide.with(getApplicationContext()).load(showAllModel.getImg_url()).into(detailedImg)
+            name.setText(showAllModel.grtName());
+            rating.setText(showAllModel.grtRating());
+            description.setText(showAllModel.grtDescription());
+            price.setText(String.valueOf(showAllModel.grtPrice()));
         }
     }
 }
