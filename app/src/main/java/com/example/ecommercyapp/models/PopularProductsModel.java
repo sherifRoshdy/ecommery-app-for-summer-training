@@ -1,6 +1,6 @@
 package com.example.ecommercyapp.models;
 
-public class PopularProductsModel {
+public class PopularProductsModel implements Serializable {
 
     String description;
     String name;

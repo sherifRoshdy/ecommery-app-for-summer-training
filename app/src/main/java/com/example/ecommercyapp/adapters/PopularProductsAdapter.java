@@ -37,6 +37,15 @@ public class PopularProductsAdapter extends RecyclerView.Adapter<PopularProducts
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(list.get(position).getName());
         holder.price.setText(String.valueOf(list.get(position).getPrice()));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (context, DetailedActivity.class);
+                intent.putExtra(name:"detailed",popularProductsModelList.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

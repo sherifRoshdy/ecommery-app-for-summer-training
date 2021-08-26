@@ -37,6 +37,8 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+    TextView catShowAll,popularShowAll,newProductShowAll;
+
     LinearLayout linearLayout;
     ProgressDialog progressDialog;
     RecyclerView catRecyclerView, newProductRecyclerView, popularRecyclerView;
@@ -71,6 +73,34 @@ public class HomeFragment extends Fragment {
         catRecyclerView = root.findViewById(R.id.rec_category);
         newProductRecyclerView = root.findViewById(R.id.new_product_rec);
         popularRecyclerView = root.findViewById(R.id.popular_rec);
+
+        catShowAll = root.findViewById(R.id.category_see_all);
+        popularShowAll = root.findViewById(R.id.popular_see_all);
+        newProductShowAll = root.findViewById(R.id.newProducts_see_all);
+
+        catShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        newProductShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        popularShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
 
         db = FirebaseFirestore.getInstance();
 
