@@ -34,12 +34,12 @@ public class RegistrationActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         auth = FirebaseAuth.getInstance();
 
-//        if (auth.getCurrentUser()!=null){
-//
-//            Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        if (auth.getCurrentUser()!=null){
+
+            Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
