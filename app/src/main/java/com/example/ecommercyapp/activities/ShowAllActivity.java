@@ -25,11 +25,16 @@ public class ShowAllActivity extends AppCompatActivity {
     List<ShowAllModel> showAllModelList;
 
     FirebaseFirestore firestore;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all);
+
+        toolbar = findViewById(R.id.show_all_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String type = getIntent().getStringExtra("type");
 
