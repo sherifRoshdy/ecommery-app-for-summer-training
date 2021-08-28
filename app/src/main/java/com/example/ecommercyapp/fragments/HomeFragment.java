@@ -18,9 +18,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.denzcoskun.imageslider.ImageSlider;
-//import com.denzcoskun.imageslider.constants.ScaleTypes;
-//import com.denzcoskun.imageslider.models.SlideModel;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.ecommercyapp.R;
 import com.example.ecommercyapp.activities.ShowAllActivity;
 import com.example.ecommercyapp.adapters.CategoryAdaptor;
@@ -111,13 +111,13 @@ public class HomeFragment extends Fragment {
         linearLayout.setVisibility(View.GONE);
 
         //image slider
-//        ImageSlider imageSlider = root.findViewById(R.id.image_slider);
-//        List<SlideModel> slideModels = new ArrayList<>();
-//        slideModels.add(new SlideModel(R.drawable.banner1,"Discount On Shoes Items", ScaleTypes.CENTER_CROP));
-//        slideModels.add(new SlideModel(R.drawable.banner2,"Discount On Perfume", ScaleTypes.CENTER_CROP));
-//        slideModels.add(new SlideModel(R.drawable.banner3,"70% OFF", ScaleTypes.CENTER_CROP));
-//
-//        imageSlider.setImageList(slideModels);
+        ImageSlider imageSlider = root.findViewById(R.id.image_slider);
+        List<SlideModel> slideModels = new ArrayList<>();
+        slideModels.add(new SlideModel(R.drawable.banner1,"Discount On Shoes Items", ScaleTypes.CENTER_CROP));
+        slideModels.add(new SlideModel(R.drawable.banner2,"Discount On Perfume", ScaleTypes.CENTER_CROP));
+        slideModels.add(new SlideModel(R.drawable.banner3,"70% OFF", ScaleTypes.CENTER_CROP));
+
+        imageSlider.setImageList(slideModels);
 
         progressDialog.setTitle("Welcome to My ECommerce App");
         progressDialog.setMessage("Please Wait....");

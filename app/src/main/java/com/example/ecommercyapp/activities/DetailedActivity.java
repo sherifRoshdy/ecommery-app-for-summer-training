@@ -1,17 +1,30 @@
 package com.example.ecommercyapp.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.ecommercyapp.R;
 import com.example.ecommercyapp.models.NewProductsModel;
 import com.example.ecommercyapp.models.PopularProductsModel;
 import com.example.ecommercyapp.models.ShowAllModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
 
 public class DetailedActivity extends AppCompatActivity {
 
@@ -38,7 +51,7 @@ public class DetailedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
 
-        toolbar = findViewById(R.id.show_all_toolbar);
+        toolbar = findViewById(R.id.detailed_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -74,7 +87,7 @@ public class DetailedActivity extends AppCompatActivity {
             description.setText(newProductsModel.getDescription());
             price.setText(String.valueOf(newProductsModel.getPrice()));
 
-            totalPrice = newProductModel.getPrice() * totalQuantity;
+            totalPrice = newProductsModel.getPrice() * totalQuantity;
 
         }
 
@@ -85,7 +98,7 @@ public class DetailedActivity extends AppCompatActivity {
             description.setText(popularProductsModel.getDescription());
             price.setText(String.valueOf(popularProductsModel.getPrice()));
 
-            totalPrice = popularProductModel.getPrice() * totalQuantity;
+            totalPrice = popularProductsModel.getPrice() * totalQuantity;
 
         }
         if(showAllModel != null){
@@ -111,11 +124,11 @@ public class DetailedActivity extends AppCompatActivity {
                 if (totalQuantity < 1) {
                     totalQuantity++;
                     quantity.setText(String.valueOf(totalQuantity));
-                    if(newProductModel != null){
-                        totalPrice = newProductModel.getPrice() * totalQuantity;
+                    if(newProductsModel != null){
+                        totalPrice = newProductsModel.getPrice() * totalQuantity;
                     }
-                    if(popularProductModel != null){
-                        totalPrice = popularProductModel.getPrice() * totalQuantity;
+                    if(popularProductsModel != null){
+                        totalPrice = popularProductsModel.getPrice() * totalQuantity;
                     }
                     if (showAllModel != null){
                         totalPrice = showAllModel.getPrice() * totalQuantity;

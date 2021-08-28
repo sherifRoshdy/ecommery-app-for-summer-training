@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         btn_signin=findViewById(R.id.btn_signin);
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         auth = FirebaseAuth.getInstance();
 
 

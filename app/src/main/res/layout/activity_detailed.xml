@@ -8,12 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.DetailedActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/detailed_toolbar"
-        android:layout_width="match_parent"
-        android:background="#8ff7fd"
-        android:layout_height="wrap_content"
-        app:title="Product Detailed" />
+
 
     <ImageView
         android:id="@+id/detailed_img"
@@ -21,6 +16,12 @@
         android:layout_height="300dp"
         android:scaleType="centerCrop"
         android:src="@drawable/camera" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detailed_toolbar"
+        android:layout_width="match_parent"
+        android:background="#8ff7fd"
+        android:layout_height="wrap_content"
+        app:title="Product Detailed" />
 
     <LinearLayout
         android:layout_width="match_parent"
